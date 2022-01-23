@@ -4,7 +4,6 @@
   "description": "A custom CKEditor 5 build",
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE.md",
-  "private": true,
   "main": "./build/ckeditor.js",
   "devDependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^31.1.0",
