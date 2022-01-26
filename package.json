@@ -2,7 +2,7 @@
   "name": "linom-editor",
   "author": "CKSource-MamadTvl",
   "description": "A custom CKEditor 5 build",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "./build/ckeditor.js",
   "devDependencies": {
