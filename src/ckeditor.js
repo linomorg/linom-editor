@@ -26,6 +26,8 @@ import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting.
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
+import DragDrop from '@ckeditor/ckeditor5-clipboard/src/dragdrop';
 import '../sample/custom.css';
 class Editor extends InlineEditor {}
 
@@ -54,6 +56,8 @@ Editor.builtinPlugins = [
     Table,
     TableToolbar,
     Underline,
+    Clipboard,
+    DragDrop
 ];
 
 // Editor configuration.
@@ -88,20 +92,28 @@ Editor.defaultConfig = {
     },
     codeBlock: {
         languages: [
-            { language: 'plaintext', label: 'Plain text' }, // The default language.
-            { language: 'c', label: 'C' },
-            { language: 'cs', label: 'C#' },
-            { language: 'cpp', label: 'cpp' },
-            { language: 'css', label: 'CSS' },
-            { language: 'diff', label: 'Diff' },
-            { language: 'html', label: 'HTML' },
-            { language: 'java', label: 'Java' },
-            { language: 'javascript', label: 'JavaScript' },
-            { language: 'php', label: 'PHP' },
-            { language: 'python', label: 'Python' },
-            { language: 'ruby', label: 'Ruby' },
-            { language: 'typescript', label: 'TypeScript' },
-            { language: 'xml', label: 'XML' },
+            { language: 'plaintext', label: 'Plain text', class: 'textile' }, // The default language.
+            { language: 'c', label: 'C', class: 'c' },
+            { language: 'cs', label: 'C#', class: 'csharp' },
+            { language: 'cpp', label: 'cpp', class: 'cpp', id: 'cpp' },
+            { language: 'css', label: 'CSS', class: 'css' },
+            { language: 'diff', label: 'Diff', class: 'diff' },
+            { language: 'html', label: 'HTML', class: 'html' },
+            { language: 'java', label: 'Java', class: 'java' },
+            {
+                language: 'javascript',
+                label: 'JavaScript',
+                class: 'javascript',
+            },
+            { language: 'php', label: 'PHP', class: 'php' },
+            { language: 'python', label: 'Python', class: 'python' },
+            { language: 'ruby', label: 'Ruby', class: 'ruby' },
+            {
+                language: 'typescript',
+                label: 'TypeScript',
+                class: 'typeScript',
+            },
+            { language: 'xml', label: 'XML', class: 'xml-doc' },
         ],
     },
     table: {
