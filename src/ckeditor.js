@@ -28,6 +28,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
 import DragDrop from '@ckeditor/ckeditor5-clipboard/src/dragdrop';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import '../sample/custom.css';
 class Editor extends InlineEditor {}
 
@@ -57,7 +58,8 @@ Editor.builtinPlugins = [
     TableToolbar,
     Underline,
     Clipboard,
-    DragDrop
+    DragDrop,
+    SimpleUploadAdapter
 ];
 
 // Editor configuration.
